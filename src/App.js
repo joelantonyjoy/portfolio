@@ -10,10 +10,9 @@ import {CompanyHisotry} from './Pages/CompanyHisotry';
 import {Location} from './Pages/Location';
 import {Services} from './Pages/Services';
 
-// https://api.github.com/users/defunkt
 function App() {
 return (
-  <div>
+  <React.Fragment>
   <nav className="navbar">
     <Link className="link" to="/">Home</Link>
     <Link className="link" to="projects">Projects</Link>
@@ -31,7 +30,7 @@ return (
       <Route path="/contact" element={<Contact/>} />
       <Route path="*" element={<Whoops404/>} />
     </Routes>
-  </div>
+    </React.Fragment>
 )
 }
 
