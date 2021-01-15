@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import {Routes,Route,Link} from 'react-router-dom';
+import {Blog} from './Pages/Blog';
+import {Home} from './Pages/Home';
+import {Projects} from './Pages/Projects';
+import {Contact} from './Pages/Contact';
+import {Whoops404} from './Pages/Whoops404';
+import {CompanyHisotry} from './Pages/CompanyHisotry';
+import {Location} from './Pages/Location';
+import {Services} from './Pages/Services';
 
+// https://api.github.com/users/defunkt
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+return (
+  <div>
+  <nav className="navbar">
+    <Link className="link" to="/">Home</Link>
+    <Link className="link" to="projects">Projects</Link>
+    <Link className="link" to="blog">Blog</Link>
+    <Link className="link" to="contact">Contact</Link>
+  </nav>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/projects" element={<Projects/>}>
+        <Route path="/services" element={<Services/>} />
+        <Route path="/history" element={<CompanyHisotry/>} />
+        <Route path="/location" element={<Location/>} />
+      </Route>
+      <Route path="/blog" element={<Blog/>} />
+      <Route path="/contact" element={<Contact/>} />
+      <Route path="*" element={<Whoops404/>} />
+    </Routes>
+  </div>
+)
 }
 
 export default App;
