@@ -1,0 +1,60 @@
+.container{
+    width:50%;
+    margin:auto;
+    text-align:center;
+    margin-top: 40px;
+}
+.joke{
+    margin:40px 0px;
+    padding:80px 16px;
+    background:pink;
+}
+.links{
+color: black;
+  text-decoration: none;
+}
+.btn{
+    background: black;
+    font-family: fontMediumRegular;
+    color:white;
+    font-size: 24px;
+    border:none;
+    padding:8px;
+    margin-top:16px;
+    outline:none;
+    cursor: pointer;
+    transition: .3s;
+}
+.btn:hover{
+    box-shadow: 6px 6px rgba(0,0,0,0.2);
+}
+.setup{
+    font-family: fontMediumRegular;
+}
+.delivery{
+    font-family: fontMediumItalic;
+}
+
+@media(max-width:768px){
+    .container{
+        width:80%;
+        margin:auto;
+        text-align:center;
+    }
+    .joke{
+        margin:20px 0px;
+        padding:40px 16px;
+        background:pink;
+    }
+    .btn{
+        background: black;
+        font-family: fontMediumRegular;
+        color:white;
+        font-size: 14px;
+        border:none;
+        padding:8px;
+        margin-top:16px;
+        outline:none;
+    }
+    
+}
