@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {Link} from 'react-router-dom';
-import '../css/jokes.css';
-import laugh from '../sounds/laugh.wav'
+import './jokes.css';
+import laugh from '../../../sounds/laugh.wav';
 
 export function Jokes() {
     const [setup,setSetup] = useState("Why did the Python data scientist get arrested at customs?");
