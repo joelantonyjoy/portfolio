@@ -7,18 +7,21 @@ import {Projects} from './Pages/Projects';
 import {Contact} from './Pages/Contact';
 import {Whoops404} from './Pages/Whoops404';
 import {Jokes} from './Pages/Projects/Jokes/Jokes';
+import Pomodoro from './Pages/Projects/Pomodoro/Pomodoro';
 import {Location} from './Pages/Location';
 import {Services} from './Pages/Services';
 
 function App() {
 return (
   <React.Fragment>
+  <div className="nav-container">
   <nav className="navbar">
     <Link className="link" to="/">Home</Link>
     <Link className="link" to="projects">Projects</Link>
     <Link className="link" to="blog">Blog</Link>
     <Link className="link" to="contact">Contact</Link>
   </nav>
+  </div>
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/projects" element={<Projects/>}>
@@ -27,8 +30,11 @@ return (
       </Route>
       <Route path="/blog" element={<Blog/>} />
       <Route path="/contact" element={<Contact/>} />
-      <Route path="projects/jokes" element={<Jokes/>} />
       <Route path="*" element={<Whoops404/>} />
+
+      {/* Project routes should be added here */}
+      <Route path="projects/jokes" element={<Jokes/>} />
+      <Route path="projects/pomodoro" element={<Pomodoro/>} />
     </Routes>
     </React.Fragment>
 )

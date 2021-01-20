@@ -45,11 +45,12 @@ var html;
             </div></div>;
     }
     return(
-        <>
+        <div style={{background:'yellow',height:'100vh',overflow:'hidden'}}>
         <h3 style={{padding:'16px',margin:0}}><Link className="links" to="/projects"> Projects </Link><span style={{fontFamily:'fontLightRegular'}}>&#62;</span><span> Jokes</span></h3>
-            <hr></hr>
+            <hr style={{height: '1px',color: 'black',
+            backgroundColor: 'black',border: 'none'}}></hr>
         <div className="container">
-            <h1>Programming Jokes</h1>
+            <h1>MakeCoderLaugh</h1>
             <p>To put a smile on your face :)</p>
             <div className="joke">
             {html}
@@ -57,6 +58,6 @@ var html;
             {/* <audio style={{display:'none'}} controls src={laugh} autoPlay></audio> */}
             <button className="btn" onClick={GetNewJoke}>Haha! Make me laugh again <span>&#128514;</span></button>
         </div>
-        </>
+        </div>
     );
 }

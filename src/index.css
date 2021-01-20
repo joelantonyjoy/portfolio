@@ -25,11 +25,11 @@
   src: url('fonts/Raleway/static/Raleway-BoldItalic.ttf');
 }
 
-body {
-  margin: 0;
+body,html{
   font-family: fontMediumRegular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width:100%; height:100%; padding: 0; margin: 0;
 }
 
 code {
