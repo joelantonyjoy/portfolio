@@ -1,4 +1,4 @@
-# # My Portfolio website with my projects
+# My Portfolio website with my projects
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
