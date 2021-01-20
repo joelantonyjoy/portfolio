@@ -4,12 +4,25 @@
   text-decoration: none;
   font-weight: 400px;
 }
+
+.link:hover{
+  color:aqua;
+}
+.nav-container{
+  width: 100%;
+  height: 67px;
+  background:black;
+  position: relative;
+}
 .navbar{
+  position: sticky;
+  top: 0;
+  left: 0;
   justify-content:space-around;
   display:flex;
-  padding:16px;
+  padding:24px 0px;
   background:black;
   color:white;
-  position: sticky;
+  width: 100%;
   font-family: fontMediumRegular;
 }

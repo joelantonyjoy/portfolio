@@ -1,7 +1,7 @@
 export function Home(){
     return (
         <div>
-            <h1>[CompanyWebsite]</h1>
+            <h1>[CompanyWebsite for feature branch]</h1>
         </div>
     );
 }
