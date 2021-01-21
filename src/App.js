@@ -8,8 +8,6 @@ import {Contact} from './Pages/Contact';
 import {Whoops404} from './Pages/Whoops404';
 import {Jokes} from './Pages/Projects/Jokes/Jokes';
 import Pomodoro from './Pages/Projects/Pomodoro/Pomodoro';
-import {Location} from './Pages/Location';
-import {Services} from './Pages/Services';
 
 function App() {
 return (
@@ -24,10 +22,7 @@ return (
   </div>
     <Routes>
       <Route path="/" element={<Home/>} />
-      <Route path="/projects" element={<Projects/>}>
-        <Route path="/services" element={<Services/>} />
-        <Route path="/location" element={<Location/>} />
-      </Route>
+      <Route path="/projects" element={<Projects/>}/>
       <Route path="/blog" element={<Blog/>} />
       <Route path="/contact" element={<Contact/>} />
       <Route path="*" element={<Whoops404/>} />

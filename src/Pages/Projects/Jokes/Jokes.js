@@ -45,14 +45,14 @@ var html;
             </div></div>;
     }
     return(
-        <div style={{background:'yellow',height:'100vh',overflow:'hidden'}}>
+        <div style={{background:'teal',height:'100vh',overflow:'hidden', color:'white'}}>
         <h3 style={{padding:'16px',margin:0}}><Link className="links" to="/projects"> Projects </Link><span style={{fontFamily:'fontLightRegular'}}>&#62;</span><span> Jokes</span></h3>
             <hr style={{height: '1px',color: 'black',
             backgroundColor: 'black',border: 'none'}}></hr>
         <div className="container">
             <h1>MakeCoderLaugh</h1>
             <p>To put a smile on your face :)</p>
-            <div className="joke">
+            <div style={{color:'black'}}  className="joke">
             {html}
         </div>
             {/* <audio style={{display:'none'}} controls src={laugh} autoPlay></audio> */}
