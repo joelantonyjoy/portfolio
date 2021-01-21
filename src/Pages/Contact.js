@@ -14,25 +14,23 @@ export function Contact(){
 
     return (
         <section style={{background:'pink',height:'100vh'}}>
-        <div style={{margin:'auto',paddingTop:60,width:'70%'}}>
+        <div style={{margin:'auto',paddingTop:2,width:'30%', minWidth:250}}>
             <form onSubmit={sendEmail}>
-            
-                <h1 style={{fontSize:48,fontFamily:'fontLightRegular'}}>Contact me</h1>
-                
+                <h1 style={{fontSize:42,fontFamily:'fontLightRegular'}}>Contact me</h1>
                 <div>
                 <label style={{display:'block'}}>Email id</label>
                 <input required onChange={setEmail}  type='email'
-                    style={{width:400,lineHeight:'32px',fontSize:'16px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
+                    style={{width:'100%',lineHeight:'32px',fontSize:'16px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
                 </div>
                 <div>
                 <label style={{display:'block'}}>Subject</label>
                 <input required onChange={setSubject} type='text'
-                    style={{width:400,lineHeight:'32px',fontSize:'16px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
+                    style={{width:'100%',lineHeight:'32px',fontSize:'16px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
                 </div>
                 <div>
                 <label style={{display:'block'}}>Message</label>
                 <textarea required onChange={setMessage} 
-                    style={{width:400,height:250,lineHeight:'32px',fontSize:'16px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
+                    style={{width:'100%',height:200,lineHeight:'32px',fontSize:'16px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
                 </div>
                 <button style={{width:'fit-content',padding:8,border:0,margin:'16px 0',background:'rgb(0,40,100)',color:'rgb(200,230,230)'}}>
                     Send your mail</button>
