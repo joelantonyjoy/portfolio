@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import {Routes,Route,Link} from 'react-router-dom';
-import {Blog} from './pages/Blog';
 import {Home} from './pages/Home';
+import {Blog} from './pages/Blog';
 import {Projects} from './pages/Projects';
 import {Contact} from './pages/Contact';
 import {Whoops404} from './pages/Whoops404';
