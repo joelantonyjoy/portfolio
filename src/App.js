@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import {Routes,Route,Link} from 'react-router-dom';
 import {Home} from './pages/Home';
 import {Blog} from './pages/Blog';
 import {Projects} from './pages/Projects';
@@ -8,6 +7,8 @@ import {Contact} from './pages/Contact';
 import {Whoops404} from './pages/Whoops404';
 import {Jokes} from './pages/projects/jokes/Jokes';
 import Pomodoro from './pages/projects/pomodoro/Pomodoro';
+
+import {Routes,Route,Link} from 'react-router-dom';
 
 function App() {
 return (
