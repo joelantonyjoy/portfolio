@@ -45,7 +45,7 @@ var html;
             </div></div>;
     }
     return(
-        <div style={{background:'teal',height:'100vh',overflow:'hidden', color:'white'}}>
+        <div style={{background:'teal', color:'white'}}>
         <h3 style={{padding:'16px',margin:0}}><Link className="links" to="/projects"> Projects </Link><span style={{fontFamily:'fontLightRegular'}}>&#62;</span><span> Jokes</span></h3>
             <hr style={{height: '1px',color: 'black',
             backgroundColor: 'black',border: 'none'}}></hr>

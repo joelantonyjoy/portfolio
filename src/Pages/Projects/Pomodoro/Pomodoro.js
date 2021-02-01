@@ -45,7 +45,6 @@ class Pomodoro extends React.Component {
 
 const Container = styled.div`
     margin: 0px;
-    width:100%;
     background:teal;
     color:white
 `;
@@ -55,7 +54,6 @@ const Content = styled.div`
   padding-top:100px;
   width:80%;
   margin:auto;
-  height:100vh;
   text-align: center;
   font-size:48px;
 `;

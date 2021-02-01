@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import {Routes,Route,Link} from 'react-router-dom';
-import {Blog} from './Pages/Blog';
-import {Home} from './Pages/Home';
-import {Projects} from './Pages/Projects';
-import {Contact} from './Pages/Contact';
-import {Whoops404} from './Pages/Whoops404';
-import {Jokes} from './Pages/Projects/Jokes/Jokes';
-import Pomodoro from './Pages/Projects/Pomodoro/Pomodoro';
+import {Blog} from './pages/Blog';
+import {Home} from './pages/Home';
+import {Projects} from './pages/Projects';
+import {Contact} from './pages/Contact';
+import {Whoops404} from './pages/Whoops404';
+import {Jokes} from './pages/projects/jokes/Jokes';
+import Pomodoro from './pages/projects/pomodoro/Pomodoro';
 
 function App() {
 return (
