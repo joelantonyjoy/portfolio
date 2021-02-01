@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import {Home} from './pages/Home';
-import {Blog} from './pages/Blog';
-import {Projects} from './pages/Projects';
-import {Contact} from './pages/Contact';
-import {Whoops404} from './pages/Whoops404';
-import {Jokes} from './pages/projects/jokes/Jokes';
-import Pomodoro from './pages/projects/pomodoro/Pomodoro';
+import {Home} from './Pages/Home';
+import {Blog} from './Pages/Blog';
+import {Projects} from './Pages/Projects';
+import {Contact} from './Pages/Contact';
+import {Whoops404} from './Pages/Whoops404';
+import {Jokes} from './Pages/Projects/jokes/Jokes';
+import Pomodoro from './Pages/Projects/pomodoro/Pomodoro';
 
 import {Routes,Route,Link} from 'react-router-dom';
 
