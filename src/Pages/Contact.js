@@ -30,9 +30,9 @@ export function Contact(){
                 <div>
                 <label style={{display:'block'}}>Message</label>
                 <textarea required onChange={setMessage} 
-                    style={{width:'100%',height:200,lineHeight:'32px',letterSpacing:'0.8px',fontSize:'14px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
+                    style={{fontFamily:'fontMediumRegular',width:'100%',height:200,lineHeight:'32px',letterSpacing:'0.8px',fontSize:'14px',margin:'8px 0 16px',paddingLeft:'8px'}}/>
                 </div>
-                <button style={{width:'fit-content',letterSpacing:'0.8px',padding:'8px 16px',background:'white',margin:'auto',color:'black',fontFamily:'fontMediumRegular',border:'1px solid black'}}>
+                <button style={{width:'fit-content',padding:'8px 16px',background:'white',margin:'auto',color:'black',fontFamily:'fontMediumRegular',border:'1px solid black'}}>
                     Send your mail</button>
             </form>
             </div>
