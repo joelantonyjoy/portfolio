@@ -5,8 +5,8 @@ import {Blog} from './Pages/Blog';
 import {Projects} from './Pages/Projects';
 import {Contact} from './Pages/Contact';
 import {Whoops404} from './Pages/Whoops404';
-import {Jokes} from './Pages/Projects/jokes/Jokes';
-import Pomodoro from './Pages/Projects/pomodoro/Pomodoro';
+import {Jokes} from './Pages/Projects/Jokes/Jokes';
+import Pomodoro from './Pages/Projects/Pomodoro/Pomodoro';
 
 import {Routes,Route,Link} from 'react-router-dom';
 
