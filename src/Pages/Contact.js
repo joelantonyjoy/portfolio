@@ -6,7 +6,7 @@ export function Contact(){
     const [subject,setSubject] = useState('');
     const [message,setMessage] = useState('');
 
-    function sendEmail(e){
+    function sendEmail(e) {
         e.preventDefault();
         Emailer(subject,email,message);
         console.log(email,subject,message);
