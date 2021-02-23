@@ -16,6 +16,7 @@ export function Contact(){
         document.getElementsByTagName("input")[0].value='';
         document.getElementsByTagName("input")[1].value='';
         document.getElementsByTagName("textarea")[0].value='';
+        alert("Thanks for your reply! :)")
     }
 
     return (
