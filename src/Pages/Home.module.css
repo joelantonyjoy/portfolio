@@ -1,0 +1,50 @@
+.container{
+    padding:8;
+    padding-top:6vh;
+    min-width:288;
+    margin:auto;
+    width:85%;
+    display:flex;
+}
+.profile{
+    width:50%;
+    min-width:288px;
+}
+.profile__description{
+    width:70%;
+    min-width:288px;
+    line-height:24px;
+    margin:32px 0;
+}
+.profile__name{
+    color: red;
+}
+.profile__resume{
+    text-decoration:none;
+    border:1px solid red;
+    padding: 8px 16px;
+    color:black;
+    cursor:pointer;
+    transition: 0.2s ease-in-out;
+}
+.profile__resume:hover{
+    color:white;
+    background-color: red;
+}
+.img__container{
+    width: 50%;
+}
+.img__content{
+    width: 100%;
+}
+
+@media only screen and (max-width:768px){
+    .profile{
+        width:100%;
+        min-width:288px;
+    }
+    .img__container{
+        display: none;
+    } 
+
+}
