@@ -46,5 +46,8 @@
     .img__container{
         display: none;
     } 
+    .profile__description{
+        width:100%;
+    }
 
 }

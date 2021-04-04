@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import img from '../Pages/developer.jpg'
+import img from './developer.jpg'
 import styles from "./Home.module.css"
 export function Home(){
     return (

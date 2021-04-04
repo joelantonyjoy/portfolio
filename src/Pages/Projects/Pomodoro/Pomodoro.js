@@ -8,12 +8,20 @@ class Pomodoro extends React.Component {
         return(
         <Container>
         <Header><Link className="links" to="/projects"> Projects </Link><span style={{fontFamily:'fontLightRegular'}}>&#62;</span><span> Pomodoro</span></Header>
-        <hr style={{height: '1px',color: 'black',
-            backgroundColor: 'black',border: 'none'}}></hr>
-            <Content> Pomodoro Timer 
+            <TimerContainer>
+            <Content>
+            <ActionButtons>
+                <PomodoroButton>
+                    Pomodoro
+                </PomodoroButton>
+                <BreakButton>
+                    Break
+                </BreakButton>
+            </ActionButtons>
             <Timer>{this.state.time}</Timer>
-            <Button onClick={this.startTimer}>Start</Button>
+            <StartButton onClick={this.startTimer}>Start</StartButton>
             </Content>
+            </TimerContainer>
         </Container>
         )
     }
@@ -46,16 +54,78 @@ class Pomodoro extends React.Component {
 const Container = styled.div`
     margin: 0px;
     background:teal;
-    color:white
+    color:white;
+    min-height:88vh;
+    font-family: 'fontMediumRegular';
+`;
+
+const TimerContainer = styled.div`
+    margin: auto;
+    background:teal;
+    color:white;
+    font-family: 'fontMediumRegular';
 `;
 
 const Content = styled.div`
-  font-size: 16px;
-  padding-top:100px;
-  width:80%;
-  margin:auto;
-  text-align: center;
-  font-size:48px;
+  padding-top:40px;
+  margin-top:50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width:50%;
+  min-width:288px;
+  height:500px;
+  margin: 48px auto;
+  display:flex;
+  flex-direction: column;
+  justify_content: center;
+  align-items: center;
+  font-size:32px;
+  border-radius: 8px;
+`;
+
+const ActionButtons = styled.div`
+    display:flex;
+    justify-content:space-evenly;
+`;
+
+const PomodoroButton = styled.button`
+    padding: 12px 40px;
+    color: white;
+    border-radius: 8px;
+    background: #76bcbd;
+    border:none;
+    margin: 32px;
+    font-size:24px;
+    font-weight: bold;
+    transition: background 0.4s;
+
+    &:hover {
+        
+    }
+    
+    &:focus {
+        outline:none;
+    }
+`;
+
+const BreakButton = styled.button`
+    padding: 12px 40px;
+    color: white;
+    width:200px;
+    border-radius: 8px;
+    background: teal;
+    border:none;
+    margin: 32px;
+    font-size:24px;
+    font-weight: bold;
+    transition: background 0.4s;
+
+    &:hover {
+    background: #76bcbd;
+    }
+    
+    &:focus {
+        outline:none;
+    }
 `;
 
 const Header = styled.h3`
@@ -65,30 +135,31 @@ const Header = styled.h3`
 `;
 
 const Timer = styled.div`
-    padding:16px;
-    margin:auto;
-    margin-top:40px;
+    margin:32px auto;
     width:fit-content;
-    font-family: none;
-    font-size: 40px;
-    border:1px black solid;
+    letter-spacing: 4px;
+    font-size: 96px;
+    font-weight: bold;
     color:white;
 `;
 
-const Button = styled.button`
-    padding:8px 48px;
-    color:black;
-    font-size:24px;
+const StartButton = styled.button`
+    padding: 12px 40px;
+    color: teal;
+    width:200px;
+    border-radius: 8px;
+    background: white;
     border:none;
+    margin: 32px;
+    font-size:24px;
+    font-weight: bold;
     transition: background 0.4s;
 
     &:hover {
-        color:white;
         background:black;
     }
     
     &:focus {
-        color:black;
         background:white;
         border:none;
         outline:none;
