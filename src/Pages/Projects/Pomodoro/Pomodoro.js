@@ -72,7 +72,6 @@ const Content = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
   width:50%;
   min-width:288px;
-  height:500px;
   margin: 48px auto;
   display:flex;
   flex-direction: column;
@@ -80,11 +79,17 @@ const Content = styled.div`
   align-items: center;
   font-size:32px;
   border-radius: 8px;
+  @media (max-width: 768px) {
+      margin: 32px auto;
+      }
 `;
 
 const ActionButtons = styled.div`
     display:flex;
     justify-content:space-evenly;
+    @media (max-width: 768px) {
+        flex-direction:column;
+        }
 `;
 
 const PomodoroButton = styled.button`
@@ -105,6 +110,11 @@ const PomodoroButton = styled.button`
     &:focus {
         outline:none;
     }
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        margin:16px;
+        }
 `;
 
 const BreakButton = styled.button`
@@ -126,6 +136,10 @@ const BreakButton = styled.button`
     &:focus {
         outline:none;
     }
+    @media (max-width: 768px) {
+        font-size: 18px;
+        margin:16px;
+        }
 `;
 
 const Header = styled.h3`
@@ -137,7 +151,6 @@ const Header = styled.h3`
 const Timer = styled.div`
     margin:32px auto;
     width:fit-content;
-    letter-spacing: 4px;
     font-size: 96px;
     font-weight: bold;
     color:white;
@@ -155,12 +168,11 @@ const StartButton = styled.button`
     font-weight: bold;
     transition: background 0.4s;
 
-    &:hover {
-        background:black;
+    &:hover{
+        color: black;
     }
     
     &:focus {
-        background:white;
         border:none;
         outline:none;
     }
