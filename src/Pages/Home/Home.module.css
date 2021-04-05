@@ -4,10 +4,11 @@
     min-width:288;
     margin:auto;
     width:85%;
-    display:flex;
+    display:grid;
+    grid-template-columns: 50% 50%;
 }
 .profile{
-    width:50%;
+    width:100%;
     min-width:288px;
 }
 .profile__description{
@@ -32,7 +33,7 @@
     background-color: red;
 }
 .img__container{
-    width: 50%;
+    width: 100%;
 }
 .img__content{
     width: 100%;
@@ -42,6 +43,10 @@
     .profile{
         width:100%;
         min-width:288px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
     }
     .img__container{
         display: none;
