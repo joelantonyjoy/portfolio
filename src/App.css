@@ -1,5 +1,4 @@
 .nav-container{
-  height: 94px;
   line-height: 70px;
   position: sticky;
   background: white;
@@ -10,7 +9,7 @@
 .navbar{
   justify-content:space-evenly;
   display:flex;
-  padding:24px 0px;
+  padding:8px 0px;
   width: 100%;
 }
 .link{
@@ -29,7 +28,6 @@
   display: none;
   color: white;
   font-size: 32px;
-  padding: 8px;
   float: right;
   z-index: 1;
 }

@@ -5,7 +5,7 @@ export function Projects(){
         <div>
             <h3 style={{padding:'16px',margin:0}}> 
                 Projects 
-                <span style={{fontFamily:'fontLightRegular'}}>&#62;</span>
+                <span style={{fontFamily:'fontLightRegular'}}> &#62;</span>
             </h3>
             <hr style={{height: '1px',color: 'black',
             backgroundColor: 'black',border: 'none'}}>
