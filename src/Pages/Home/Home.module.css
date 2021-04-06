@@ -1,30 +1,32 @@
 .container{
-    padding:8;
-    padding-top:6vh;
-    min-width:288;
-    margin:auto;
-    width:85%;
-    display:grid;
-    grid-template-columns: 50% 50%;
+    display:flex;
+    flex-direction: column;
+    height: calc(100vh - 96px);
+    background: #000000;
+    color: #ffffff;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
 .profile{
-    width:100%;
+    width:50%;
     min-width:288px;
 }
 .profile__description{
-    width:70%;
-    min-width:288px;
     line-height:24px;
-    margin:32px 0;
+    text-align: center;
 }
 .profile__name{
     color: red;
+}
+.profile__role{
+    margin-bottom: 100px;
 }
 .profile__resume{
     text-decoration:none;
     border:1px solid red;
     padding: 8px 16px;
-    color:black;
+    color: #ffffff;
     cursor:pointer;
     transition: 0.2s ease-in-out;
 }
@@ -37,6 +39,17 @@
 }
 .img__content{
     width: 100%;
+}
+.social_media{
+    min-width: 288px;
+    width:30%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.social_media img{
+    height: 40px;
 }
 
 @media only screen and (max-width:768px){
