@@ -14,12 +14,12 @@ export function Projects(){
             <div style={{display:'block',width:'70%',minWidth:'288px',maxWidth:740,margin:'auto'}}>
             
                     <Link style={{margin:8,textDecoration:'none',color:'red',fontSize:16}} to="jokes" title="Jokes Generator">
-                    <div style={{padding:32,border:'1px solid black'}}>
+                    <div style={{padding:32,border:'1px solid white'}}>
                     Jokes Generator
                     </div>
                     </Link>
                     <Link style={{margin:8,textDecoration:'none',color:'red',fontSize:16}} to="pomodoro" title="Pomodoro Timer">
-                    <div style={{padding:32,border:'1px solid black'}}>
+                    <div style={{padding:32,border:'1px solid white'}}>
                     Pomodoro Timer
                     </div>
                     </Link>
