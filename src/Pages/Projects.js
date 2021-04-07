@@ -12,18 +12,18 @@ export function Projects(){
             </hr>
             <p style={{padding:'32px 32px 32px'}}>These are projects I have done :</p>
             <div style={{display:'block',width:'70%',minWidth:'288px',maxWidth:740,margin:'auto'}}>
-            
+                <div style={{padding:32,border:'1px solid white'}}>
                     <Link style={{margin:8,textDecoration:'none',color:'red',fontSize:16}} to="jokes" title="Jokes Generator">
-                    <div style={{padding:32,border:'1px solid white'}}>
-                    Jokes Generator
-                    </div>
+                    <p>Jokes Generator</p>
                     </Link>
+                    <a target='_blank' rel="noreferrer" href='https://github.com/joelantonyjoy/portfolio/tree/master/src/Pages/Projects/Jokes'>View Code</a>
+                </div>
+                <div style={{padding:32,border:'1px solid white'}}>
                     <Link style={{margin:8,textDecoration:'none',color:'red',fontSize:16}} to="pomodoro" title="Pomodoro Timer">
-                    <div style={{padding:32,border:'1px solid white'}}>
-                    Pomodoro Timer
-                    </div>
+                    <p>Pomodoro Timer</p>
                     </Link>
-                
+                    <a target='_blank' rel="noreferrer" href='https://github.com/joelantonyjoy/portfolio/tree/master/src/Pages/Projects/Pomodoro'>View Code</a>
+                </div> 
             </div>
             <Outlet/>
         </div>
