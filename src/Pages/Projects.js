@@ -12,16 +12,18 @@ export function Projects(){
             </hr>
             <p style={{padding:'32px 32px 32px'}}>These are projects I have done :</p>
             <div style={{display:'block',width:'70%',minWidth:'288px',maxWidth:740,margin:'auto'}}>
-                <div style={{padding:32,border:'1px solid white'}}>
+                <div style={{padding:32,border:'1px solid white',marginBottom:16}}>
                     <Link style={{margin:8,textDecoration:'none',color:'red',fontSize:16}} to="jokes" title="Jokes Generator">
                     <p>Jokes Generator</p>
                     </Link>
+                    <p>Web application to make coders laugh by producing random coding jokes.</p>
                     <a target='_blank' rel="noreferrer" href='https://github.com/joelantonyjoy/portfolio/tree/master/src/Pages/Projects/Jokes'>View Code</a>
                 </div>
-                <div style={{padding:32,border:'1px solid white'}}>
+                <div style={{padding:32,border:'1px solid white',marginBottom:16}}>
                     <Link style={{margin:8,textDecoration:'none',color:'red',fontSize:16}} to="pomodoro" title="Pomodoro Timer">
                     <p>Pomodoro Timer</p>
                     </Link>
+                    <p>Pomodoro Timer web application to increase time utilisation and productivity.</p>
                     <a target='_blank' rel="noreferrer" href='https://github.com/joelantonyjoy/portfolio/tree/master/src/Pages/Projects/Pomodoro'>View Code</a>
                 </div> 
             </div>
