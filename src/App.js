@@ -14,23 +14,28 @@ import {Routes,Route,Link} from 'react-router-dom';
 function toggle(e){
   if(document.getElementsByClassName("navbar-small")[0].style.display === "none"){
     document.getElementsByClassName("navbar-small")[0].style.display = 'block';
-    document.getElementsByClassName("toggle__button")[0].innerHTML = 'x';
-    
+    document.getElementsByClassName("toggle__button")[0].classList.add('toggle__button--open')
+    document.getElementsByClassName("toggle__button")[0].classList.remove('toggle__button--closed')
   } else{
     document.getElementsByClassName("navbar-small")[0].style.display = 'none';
-    document.getElementsByClassName("toggle__button")[0].innerHTML = '=';
+    document.getElementsByClassName("toggle__button")[0].classList.add('toggle__button--closed')
+    document.getElementsByClassName("toggle__button")[0].classList.remove('toggle__button--open')
   }
 }
 
 function closeMenu(){
     document.getElementsByClassName("navbar-small")[0].style.display = 'none';
+    document.getElementsByClassName("toggle__button")[0].classList.add('toggle__button--closed')
+    document.getElementsByClassName("toggle__button")[0].classList.remove('toggle__button--open')
 }
 
 function App() {
 return (
   <React.Fragment>
   <div className="nav-container">
-  <img className="navbar-logo" src={logo_web} alt='joel'></img>
+  <Link to="/">
+    <img className="navbar-logo" src={logo_web} alt='joel'></img>
+  </Link>
   <nav className="navbar">
     <Link className="link" to="/">HOME</Link>
     <Link className="link" to="projects">PROJECTS</Link>
@@ -39,8 +44,10 @@ return (
   </nav>
   </div>
   <div className="nav-small">
-  <img class="navbar-logo-mob" src={logo_mobile} alt="joel"></img>
-  <div className="toggle__button" onClick={toggle}>=</div>
+  <Link to="/">
+    <img className="navbar-logo-mob" src={logo_mobile} alt="joel"></img>
+  </Link>
+  <div className="toggle__button toggle__button--closed" onClick={toggle}></div>
   <nav className="navbar-small">
     <Link onClick={closeMenu} className="link-small" to="/">HOME</Link>
     <Link onClick={closeMenu} className="link-small" to="projects">PROJECTS</Link>

@@ -2,25 +2,25 @@
   line-height: 70px;
   position: sticky;
   display: flex;
-  width: 80%;
+  padding-top: 16px;
+  justify-content: space-between;
+  align-items: center;
   margin: auto;
   background: black;
-  color:white;
+  color: white;
   top: 0;
   left: 0;
   font-size: 16px;
 }
 .navbar{
-  justify-content:space-evenly;
-  display:flex;
+  justify-content: space-evenly;
+  display: flex;
+  width: 70%;
   margin-left: 32px;
-  padding:8px 0px;
-  width: 100%;
 }
 .navbar-logo{
   height: 24px;
-  margin: auto;
-  padding-top: 6px;
+  margin-left: 64px;
 }
 .navbar-logo-mob{
   position: absolute;
@@ -28,7 +28,7 @@
   height: 40px;
 }
 .link{
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   font-family: fontMediumRegular;
 }
@@ -44,6 +44,7 @@
   color: white;
   font-size: 32px;
   float: right;
+  top: 16px;
   z-index: 1;
 }
 .nav-small{
@@ -55,7 +56,7 @@
   color:white;
   top: 0;
   left: 0;
-  transition: all 2s ease-in;
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .navbar-small{
   height: 100vh;
@@ -63,7 +64,7 @@
   color: white;
   background: black;
   text-align: center;
-  padding:24px 0px;
+  padding: 100px 0px;
   width: 100%;
 }
 .link-small{
@@ -82,16 +83,62 @@
 a:visited{
   color:inherit;
 }
-@media only screen and (max-width:425px){
+@media only screen and (max-width:768px){
   .nav-container{
     display: none;
   }
   .nav-small{
     display: block;
   }
-  .toggle__button{
+  .toggle__button--closed{
     display: block;
     position: absolute;
     left: 80%;
+    content: '';
+    width: 2px;
+    height: 24px;
+    background: white;
+    transform: rotate(90deg);
+  }
+  .toggle__button--closed:before{
+    display: block;
+    position: absolute;
+    left: 80%;
+    content: '';
+    width: 2px;
+    height: 24px;
+    background: white;
+    margin-left: 4px;
+  }
+  .toggle__button--closed:after{
+    display: block;
+    position: absolute;
+    left: 80%;
+    content: '';
+    width: 2px;
+    height: 24px;
+    background: white;
+    margin-left: 10px;
+  }
+  .toggle__button--open{
+    display: block;
+    position: absolute;
+    left: 80%;
+    content: '';
+    width: 2px;
+    height: 24px;
+    background: white;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .toggle__button--open::before{
+    display: block;
+    position: absolute;
+    left: 80%;
+    content: '';
+    width: 2px;
+    height: 24px;
+    background: white;
+    margin-left: 9px;
+    transform: rotate(90deg) translate(0px, 10px);
   }
 }
