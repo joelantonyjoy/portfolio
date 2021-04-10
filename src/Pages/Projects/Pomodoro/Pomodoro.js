@@ -6,21 +6,28 @@ import styled from 'styled-components';
 class Pomodoro extends React.Component {
     render(){
         return(
-        <Container>
-        <Header><Link className="links" to="/projects"> Projects </Link><span style={{fontFamily:'fontLightRegular'}}>&#62;</span><span> Pomodoro</span></Header>
+        <Container id='project-container'>
+        <Header>
+            <Link className="links" to="/projects"> Projects </Link>
+            <span style={{fontFamily:'fontLightRegular'}}>&#62;</span>
+            <span> Pomodoro</span>
+        </Header>
             <TimerContainer>
             <Content>
             <ActionButtons>
-                <PomodoroButton>
-                    Pomodoro
+                <PomodoroButton onChange={this.updateTimerMode}>
+                <input style={{display:'none'}} type='radio' id='Pomodoro' value='Pomodoro' name='timerMode' defaultChecked={true} />
+                <InputLabel htmlFor='Pomodoro'>Pomodoro</InputLabel> 
                 </PomodoroButton>
-                <BreakButton>
-                    Break
+                <BreakButton onChange={this.updateTimerMode}>
+                <input style={{display:'none'}} type='radio' value='Break' name='timerMode' id='Break' />
+                <InputLabel htmlFor='Break'>Break</InputLabel> 
                 </BreakButton>
             </ActionButtons>
             <Timer>{this.state.time}</Timer>
-            <StartButton onClick={this.startTimer}>Start</StartButton>
+            <StartButton onClick={this.startTimer}>{this.state.isStarted?'PAUSE':'START'}</StartButton>
             </Content>
+            <TimerQuote>{this.state.selectedMode === 'Pomodoro'?`Let's work smart !!`: `Let's take a break :)`}</TimerQuote>
             </TimerContainer>
         </Container>
         )
@@ -29,39 +36,71 @@ class Pomodoro extends React.Component {
     constructor(props) 
     { 
         super(props); 
-        this.state = {time: '20:00' }; 
-    } 
-
-    startTimer = () => {
-        var duration = 20*60;
-        var timer = duration, minutes, seconds,currentTime;
-        setInterval(()=>{
-            minutes = parseInt(timer / 60, 10);
-            seconds = parseInt(timer % 60, 10);
+        this.state = {time: '10:00', isStarted: false ,duration: 600, isInitialised: false,selectedMode : 'Pomodoro'}; 
+    }
+    updateTimerMode = () => {
+        let timerModes = document.getElementsByName('timerMode');
+        timerModes.forEach( timerMode => {
+            if(timerMode.checked){
+                this.setState({selectedMode:timerMode.value}); 
+                timerMode.parentNode.style.background = 'rgba(255,255,255,0.2)';
+            } else {
+                timerMode.parentNode.style.background = 'none';
+            }
+        });
+        if(this.state.selectedMode !== 'Pomodoro'){
+            this.setState({time: '10:00',duration: 600, isStarted: false});
+            document.getElementById('project-container').style.background = 'rgb(210 56 51)';
+        } else {
+            this.setState({time: '05:00',duration: 300, isStarted: false});
+            document.getElementById('project-container').style.background = 'teal';
+        }
+    }
     
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-            currentTime = minutes + ":" + seconds;
-            this.setState({time: currentTime }); 
-            if (--timer < 0) {
-                timer = duration;
-            }    
-        }, 1000);
+    startTimer = (e) => {
+        var minutes,seconds,currentTime,timer;
+        this.setState({isStarted: !this.state.isStarted});
+        if(!this.state.isStarted){
+            console.log("inside : " + this.state.duration );
+            if(!this.state.isInitialised){
+                this.setState({isInitialised: true});
+                timer = this.state.duration
+                var timeInterval = setInterval(() => {
+                    if(this.state.isStarted){
+                        if (timer-- <= 0) {
+                            if(this.state.selectedMode === 'Pomodoro'){
+                                alert("Take a break");
+                            } else {
+                                alert("Get back to work");
+                            }
+                            clearInterval(timeInterval);
+                        } else {
+                            minutes = parseInt(timer / 60, 10);
+                            seconds = parseInt(timer % 60, 10);
+                            minutes = minutes < 10 ? "0" + minutes : minutes;
+                            seconds = seconds < 10 ? "0" + seconds : seconds;
+                            currentTime = minutes + ":" + seconds;
+                            this.setState({time: currentTime }); 
+                        }
+                    }
+                }, 1000);
+            }
+        }
     }
 }
 
 
 const Container = styled.div`
     margin: 0px;
-    background:teal;
+    background:rgb(210 56 51);
     color:white;
     min-height:88vh;
     font-family: 'fontMediumRegular';
+    transition: all 1s;
 `;
 
 const TimerContainer = styled.div`
     margin: auto;
-    background:teal;
     color:white;
     font-family: 'fontMediumRegular';
 `;
@@ -92,20 +131,27 @@ const ActionButtons = styled.div`
         }
 `;
 
+const InputLabel = styled.label`
+    position:relative;
+    height:100%;
+    width:100%;
+    cursor:pointer;
+    top: 0;
+    left: 0;
+    `;
+
 const PomodoroButton = styled.button`
-    padding: 12px 40px;
+    position:relative;
+    padding: 12px 32px;
     color: white;
     border-radius: 8px;
-    background: #76bcbd;
+    background:rgba(255,255,255,0.2);
     border:none;
+    width:200px;
     margin: 32px;
     font-size:24px;
     font-weight: bold;
     transition: background 0.4s;
-
-    &:hover {
-        
-    }
     
     &:focus {
         outline:none;
@@ -113,32 +159,29 @@ const PomodoroButton = styled.button`
 
     @media (max-width: 768px) {
         font-size: 18px;
-        margin:16px;
+        margin:16px 16px 0;
         }
 `;
 
 const BreakButton = styled.button`
-    padding: 12px 40px;
+    position:relative;
+    padding: 12px 32px;
     color: white;
     width:200px;
     border-radius: 8px;
-    background: teal;
+    background: none;
     border:none;
     margin: 32px;
     font-size:24px;
     font-weight: bold;
     transition: background 0.4s;
-
-    &:hover {
-    background: #76bcbd;
-    }
     
     &:focus {
         outline:none;
     }
     @media (max-width: 768px) {
         font-size: 18px;
-        margin:16px;
+        margin:16px 16px 0;
         }
 `;
 
@@ -158,7 +201,6 @@ const Timer = styled.div`
 
 const StartButton = styled.button`
     padding: 12px 40px;
-    color: teal;
     width:200px;
     border-radius: 8px;
     background: white;
@@ -167,15 +209,19 @@ const StartButton = styled.button`
     font-size:24px;
     font-weight: bold;
     transition: background 0.4s;
+    box-shadow: rgb(235 235 235) 0px 6px 0px;
 
-    &:hover{
-        color: black;
-    }
-    
     &:focus {
         border:none;
         outline:none;
     }
 `;
+
+const TimerQuote = styled.p`
+    text-align: center;
+    padding-bottom: 32px;
+    margin: 0;
+    font-weight: 600;
+    `;
 
 export default Pomodoro;
