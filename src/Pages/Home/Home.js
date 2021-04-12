@@ -4,13 +4,21 @@ import linkedin from '../../assets/images/linkedin-logo.svg'
 import github from '../../assets/images/github-logo.svg'
 import styles from "./Home.module.css"
 export function Home(){
+    // let roles = ['Software Engineer','Full Stack Developer','UX Enthusiast','Minimalist','Problem Solver'];
+    // const [currentRole,setCurrentRole] = useState('');
+    // let i = 0;
+    // function setRole(){
+    //     setCurrentRole(roles[i++]);
+    //     i = i % roles.length;
+    // }
+    // setInterval(setRole,3000);
     return (
         <div className={styles.container}>
             <div className={styles.profile}>
 
                 <h1 className={styles.profile__name}>Joel Antony Joy</h1>
                 <h3 className={styles.profile__role}>Software Engineer / Full Stack Developer</h3>
-
+ 
                 {/* <p className={styles.profile__description}>
                     I am a Software Engineer with more than 1.6 years of experience in building responsive dynamic web applications with latest web technologies. 
                     I have strong problem solving capabilities and has been awarded with an Honor Award by my current employer Nissan Digital India.

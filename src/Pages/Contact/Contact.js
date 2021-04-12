@@ -26,19 +26,19 @@ export function Contact(){
 
                 <h1 className={styles.form__header}>Contact me</h1>
 
-                <div>
+                <div className={styles.form__field}>
                 <label className={styles.form__label} >Email id</label>
-                <input className={styles.form__input} required onChange={(e)=>{setEmail(e.target.value)}} value={email} type='email'/>
+                <input className={styles.form__input} required onChange={(e)=>{setEmail(e.target.value)}} value={email} type='email' placeholder='Enter your email...'/>
                 </div>
 
-                <div>
+                <div className={styles.form__field}>
                 <label className={styles.form__label} >Subject</label>
-                <input className={styles.form__input}  required onChange={(e)=>{setSubject(e.target.value)}} value={subject} type='text'/>
+                <input className={styles.form__input}  required onChange={(e)=>{setSubject(e.target.value)}} value={subject} type='text' placeholder='Enter the subject...'/>
                 </div>
 
-                <div>
+                <div className={styles.form__field}>
                 <label className={styles.form__label} >Message</label>
-                <textarea className={[styles.form__input,styles.form__textarea].join(' ')} required onChange={(e)=>{setMessage(e.target.value)}} value={message}/>
+                <textarea placeholder='I value your feedback. Tell me !' className={[styles.form__input,styles.form__textarea].join(' ')} required onChange={(e)=>{setMessage(e.target.value)}} value={message}/>
                 </div>
 
                 <button className={styles.form__button}>
