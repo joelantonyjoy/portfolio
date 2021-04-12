@@ -6,16 +6,24 @@
 }
 .form__header{
     color: red;
-    font-size:42px;
+    font-size:32px;
+    text-align: center;
+    margin-bottom: 32px;
     font-family:'fontLightRegular';
+}
+
+.form__field{
+    margin-bottom: 16px;
 }
 
 .form__label{
     display: block;
+    font-weight: 600;
 }
 
 .form__button{
     text-decoration:none;
+    font-weight: 600;
     background-color: red;
     padding: 16px 32px;
     border: none;
@@ -37,11 +45,17 @@
     margin: 0;
     width:100%;
     line-height:32px;
+    height: 40px;
     font-size:14px;
     margin:8px 0 16px;
     padding-left:8px;
     letter-spacing:0.8px;
     box-sizing: border-box;
+}
+.form__input:focus{
+    outline: none;
+    box-sizing: border-box;
+    border: 4px solid red;
 }
 .form__textarea{
     font-family: 'fontMediumRegular';
