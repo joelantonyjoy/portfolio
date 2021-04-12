@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Home} from './Pages/Home/Home';
-import {Blog} from './Pages/Blog';
+import {Blog} from './Pages/Blogs/Blog';
 import {Projects} from './Pages/Projects/Projects';
 import {Contact} from './Pages/Contact/Contact';
 import {Whoops404} from './Pages/Whoops404';
