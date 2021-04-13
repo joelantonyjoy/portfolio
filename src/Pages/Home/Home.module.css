@@ -28,6 +28,7 @@
     padding: 8px 16px;
     color: #ffffff;
     cursor:pointer;
+    font-size: 20px;
     transition: 0.2s ease-in-out;
 }
 .profile__resume:hover{
@@ -50,6 +51,23 @@
 
 .social_media img{
     height: 40px;
+}
+
+.profile__hireme{
+    display: block;
+    cursor:pointer;
+    text-decoration: 1px solid red;
+    color: red;
+    width: fit-content;
+    margin: 32px auto;
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+    font-size: 20px;
+    border-bottom: 2px solid red;
+}
+
+.profile__hireme:hover{
+    color: white;
 }
 
 @media only screen and (max-width:768px){
