@@ -28,9 +28,9 @@ export function Home(){
                     Download Resume
                 </Link>
                 <a className={styles.profile__hireme} 
-                href='mailto:joelantonyjoy@gmail.com?Subject=Software Engineer opportunity @ [Your company]&body=Hi Joel,%0d%0a%0d%0aI would like to schedule a meeting to discuss opportunities at [Your Conpany] for the role of Software Engineer.
+                href='mailto:joelantonyjoy@gmail.com?Subject=Software Engineer opportunity at [ Your company ]&body=Hi Joel,%0d%0a%0d%0aHope you are doing well &#128522;%0d%0a%0d%0aI would like to schedule a meeting to discuss opportunities at [ Your Company ] for the role of Software Engineer.
                 %0d%0a%0d%0aRegards,
-                %0d%0a[Your name]
+                %0d%0a[ Your good name ]
                 '>
                     Hire Me
                 </a>
