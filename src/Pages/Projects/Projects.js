@@ -38,6 +38,21 @@ export function Projects(){
                     </div>
                 </div> 
 
+                <div className={styles.project}>
+                    <p className={styles.project__name}>SNAKE GAME</p>
+                    <p className={styles.project__description}>The game of the 2000s back into your big screens.</p>
+                    <div className={styles.project__actions}>
+                        <a className={styles.project__code} target='_blank' 
+                        rel="noreferrer" href='https://github.com/joelantonyjoy/CSSJSProjects/tree/master/snake-game'>
+                            VIEW CODE
+                        </a>
+                        <a className={styles.project__demo} target='_blank' 
+                        rel="noreferrer" href='https://modernsnakegame.netlify.app/' title="Snake Game">
+                            LIVE DEMO
+                        </a>
+                    </div>
+                </div> 
+
             </div>
             <Outlet/>
         </div>
