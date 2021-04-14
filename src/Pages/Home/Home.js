@@ -23,11 +23,17 @@ export function Home(){
                     I am a Software Engineer with more than 1.6 years of experience in building responsive dynamic web applications with latest web technologies. 
                     I have strong problem solving capabilities and has been awarded with an Honor Award by my current employer Nissan Digital India.
                 </p> */}
-
                 <Link className={styles.profile__resume}
                 to="Resume/Joel_Antony_Joy_Resume.pdf" target="_blank" download aria-label="Download Joel's Resume">
-                Download Resume
+                    Download Resume
                 </Link>
+                <a className={styles.profile__hireme} 
+                href='mailto:joelantonyjoy@gmail.com?Subject=Software Engineer opportunity @ [Your company]&body=Hi Joel,%0d%0a%0d%0aI would like to schedule a meeting to discuss opportunities at [Your Conpany] for the role of Software Engineer.
+                %0d%0a%0d%0aRegards,
+                %0d%0a[Your name]
+                '>
+                    Hire Me
+                </a>
                 {/* <p style={{marginTop:'10vh'}} >
                 The website is currently under construction.
                 </p>
