@@ -1,19 +1,24 @@
 let blogs = [
     {
         blogName : 'How to center anything with CSS !',
-        blogPublishedDate : '12 September 2021',
+        blogPublishedDate : 'To be published soon...',
         blogReadTime : '3 min read',
         blogTags : ['HTML', 'CSS', 'Frontend']
     },{
-        blogName : 'How to find purpose in life!',
-        blogPublishedDate : '9 June 2021',
+        blogName : `10 CSS tricks you didn't know!`,
+        blogPublishedDate : 'To be published soon...',
         blogReadTime : '5 min read',
-        blogTags : ['Self-Help', 'Motivation']
+        blogTags : ['CSS']
     },{
-        blogName : 'What is dogeCoin?',
-        blogPublishedDate : '12 February 2021',
+        blogName : 'Book Summary : GRIT',
+        blogPublishedDate : 'To be published soon...',
         blogReadTime : '8 min read',
-        blogTags : ['CryptoCurrency', 'Digital']
+        blogTags : ['Books', 'Self-help']
+    },{
+        blogName : 'Book Summary : Atomic Habits',
+        blogPublishedDate : 'To be published soon...',
+        blogReadTime : '8 min read',
+        blogTags : ['Books', 'Self-help']
     }
 ]
 export default blogs;
