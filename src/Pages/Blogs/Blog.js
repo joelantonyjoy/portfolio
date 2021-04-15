@@ -1,43 +1,23 @@
 import styles from "./Blogs.module.css"
+import blogs from './BlogData'
 export function Blog(){
     return (
         <div>
             <div className={styles.container}>
-                <div className={styles.blog}>
-                    <p className={styles.blog__name}>
-                        How to center anything with CSS !
-                    </p>
-                    <p className={styles.blog_publishedDate}>12 September 2021</p>
-                    <p className={styles.blog_readTime}>3 min read</p>
-                    <p className={styles.blog__tags}>TAGS : <span>HTML</span> , <span>CSS</span> , <span>Frontend</span></p>
-                </div>
+            {
+                blogs.map(blog => {
 
-                <div className={styles.blog}>
-                    <p className={styles.blog__name}>
-                        How to center anything with CSS !
-                    </p>
-                    <p className={styles.blog_publishedDate}>12 September 2021</p>
-                    <p className={styles.blog_readTime}>3 min read</p>
-                    <p className={styles.blog__tags}>TAGS : <span>HTML</span> , <span>CSS</span> , <span>Frontend</span></p>
-                </div>
-
-                <div className={styles.blog}>
-                    <p className={styles.blog__name}>
-                        How to center anything with CSS !
-                    </p>
-                    <p className={styles.blog_publishedDate}>12 September 2021</p>
-                    <p className={styles.blog_readTime}>3 min read</p>
-                    <p className={styles.blog__tags}>TAGS : <span>HTML</span> , <span>CSS</span> , <span>Frontend</span></p>
-                </div>
-
-                <div className={styles.blog}>
-                    <p className={styles.blog__name}>
-                        How to center anything with CSS !
-                    </p>
-                    <p className={styles.blog_publishedDate}>12 September 2021</p>
-                    <p className={styles.blog_readTime}>3 min read</p>
-                    <p className={styles.blog__tags}>TAGS : <span>HTML</span> , <span>CSS</span> , <span>Frontend</span></p>
-                </div>
+                    return(
+                        <div className={styles.blog}>
+                            <p className={styles.blog__name}>
+                                {blog.blogName}
+                            </p>
+                            <p className={styles.blog_publishedDate}>{blog.blogPublishedDate}</p>
+                            <p className={styles.blog_readTime}>{blog.blogReadTime}</p>
+                            <p className={styles.blog__tags}>TAGS : {blog.blogTags.map(tag=>{return(<span>{tag} </span>)})}</p>
+                        </div>)
+                        })
+            }
             </div>
         </div>
     );
