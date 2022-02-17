@@ -44,7 +44,7 @@ export function Home(){
             </div>
             <div className={styles.social_media}>
                 <a href='https://www.instagram.com/i.joel_antony_joy' rel="noreferrer" target='_blank'><img alt='insta' src={insta}></img></a>
-                <a href='https://www.linkedin.com/in/joel-antony-joy' rel="noreferrer" target='_blank'><img alt='linkedin' src={linkedin}></img></a>
+                <a href='https://www.linkedin.com/in/joelantonyjoy' rel="noreferrer" target='_blank'><img alt='linkedin' src={linkedin}></img></a>
                 <a href='https://github.com/joelantonyjoy' rel="noreferrer" target='_blank'><img alt='github' src={github}></img></a>
             </div>
         </div>
